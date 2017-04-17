@@ -1,7 +1,7 @@
 # test coverage for  [restler (v3.4.0)](https://github.com/danwrong/restler)  [![npm package](https://img.shields.io/npm/v/npmtest-restler.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-restler) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-restler.svg)](https://travis-ci.org/npmtest/node-npmtest-restler)
 #### An HTTP client library for node.js
 
-[![NPM](https://nodei.co/npm/restler.png?downloads=true)](https://www.npmjs.com/package/restler)
+[![NPM](https://nodei.co/npm/restler.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/restler)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-restler/tree/alpha)|
 |--:|:--|
@@ -9,11 +9,17 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-restler/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-restler/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-restler/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-restler/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-restler/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-restler/build/coverage.html/index.html)
+- [https://npmtest.github.io/node-npmtest-restler/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-restler/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-restler/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-restler%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-restler/build/test-report.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-restler/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-restler/build/coverage.html/index.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-restler/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-restler%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-restler/build/apidoc.html)
+- [https://npmtest.github.io/node-npmtest-restler/build/test-report.html](https://npmtest.github.io/node-npmtest-restler/build/test-report.html)
+
+[![test-report](https://npmtest.github.io/node-npmtest-restler/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-restler/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-restler/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-restler/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-restler/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-restler/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-restler/build/screenCapture.npmPackageListing.svg)
 
@@ -31,12 +37,10 @@
     },
     "contributors": [
         {
-            "name": "Dan Webb",
-            "email": "dan@danwebb.net"
+            "name": "Dan Webb"
         },
         {
-            "name": "Ben Marvell",
-            "email": "ben@marvell-consulting.com"
+            "name": "Ben Marvell"
         }
     ],
     "dependencies": {
@@ -65,21 +69,17 @@
     "main": "./lib/restler",
     "maintainers": [
         {
-            "name": "danwrong",
-            "email": "dan@danwebb.net"
+            "name": "danwrong"
         },
         {
-            "name": "ayoung",
-            "email": "andrewdyoung@gmail.com"
+            "name": "ayoung"
         },
         {
-            "name": "easternbloc",
-            "email": "ben@marvell-consulting.com"
+            "name": "easternbloc"
         }
     ],
     "name": "restler",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/danwrong/restler.git"
