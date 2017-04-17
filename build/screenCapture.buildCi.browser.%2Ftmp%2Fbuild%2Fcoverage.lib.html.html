@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-restler/restler/lib/restler.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-restler/node_modules/restler/lib/restler.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-restler">npmtest-restler (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-restler/restler/lib/restler.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-restler/node_modules/restler/lib/restler.js</span></h1>
     <h2>
         
         Statements: <span class="metric">12.5% <small>(36 / 288)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-restler/restler/lib/</a> &#187; restler.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> » <a href="index.html">node-npmtest-restler/node_modules/restler/lib/</a> » restler.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -1311,7 +1309,7 @@
     iconv     = require('iconv-lite');
 &nbsp;
 function mixin(target, source) {
-  source = source || <span class="branch-1 cbranch-no" title="branch not covered" >{};</span>
+  source = source || <span class="branch-1 cbranch-no" title="branch not covered">{};</span>
   Object.keys(source).forEach(function(key) {
     target[key] = source[key];
   });
@@ -1319,62 +1317,62 @@ function mixin(target, source) {
   return target;
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function Request(uri, options) {</span>
-<span class="cstat-no" title="statement not covered" >  events.EventEmitter.call(this);</span>
-<span class="cstat-no" title="statement not covered" >  this.url = url.parse(uri);</span>
-<span class="cstat-no" title="statement not covered" >  this.options = options;</span>
-<span class="cstat-no" title="statement not covered" >  this.headers = {</span>
+<span class="fstat-no" title="function not covered">function Request(uri, options) {</span>
+<span class="cstat-no" title="statement not covered">  events.EventEmitter.call(this);</span>
+<span class="cstat-no" title="statement not covered">  this.url = url.parse(uri);</span>
+<span class="cstat-no" title="statement not covered">  this.options = options;</span>
+<span class="cstat-no" title="statement not covered">  this.headers = {</span>
     'Accept': '*/*',
     'User-Agent': 'Restler for node.js',
     'Host': this.url.host
   };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this.headers['Accept-Encoding'] = 'gzip, deflate';</span>
+<span class="cstat-no" title="statement not covered">  this.headers['Accept-Encoding'] = 'gzip, deflate';</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  mixin(this.headers, options.headers || {});</span>
+<span class="cstat-no" title="statement not covered">  mixin(this.headers, options.headers || {});</span>
 &nbsp;
   // set port and method defaults
-<span class="cstat-no" title="statement not covered" >  if (!this.url.port) <span class="cstat-no" title="statement not covered" >this.url.port = (this.url.protocol == 'https:') ? '443' : '80';</span></span>
-<span class="cstat-no" title="statement not covered" >  if (!this.options.method) <span class="cstat-no" title="statement not covered" >this.options.method = (this.options.data) ? 'POST' : 'GET';</span></span>
-<span class="cstat-no" title="statement not covered" >  if (typeof this.options.followRedirects == 'undefined') <span class="cstat-no" title="statement not covered" >this.options.followRedirects = true;</span></span>
+<span class="cstat-no" title="statement not covered">  if (!this.url.port) <span class="cstat-no" title="statement not covered">this.url.port = (this.url.protocol == 'https:') ? '443' : '80';</span></span>
+<span class="cstat-no" title="statement not covered">  if (!this.options.method) <span class="cstat-no" title="statement not covered">this.options.method = (this.options.data) ? 'POST' : 'GET';</span></span>
+<span class="cstat-no" title="statement not covered">  if (typeof this.options.followRedirects == 'undefined') <span class="cstat-no" title="statement not covered">this.options.followRedirects = true;</span></span>
 &nbsp;
   // stringify query given in options of not given in URL
-<span class="cstat-no" title="statement not covered" >  if (this.options.query &amp;&amp; !this.url.query) {</span>
-<span class="cstat-no" title="statement not covered" >    if (typeof this.options.query == 'object')</span>
-<span class="cstat-no" title="statement not covered" >      this.url.query = qs.stringify(this.options.query);</span>
-    else <span class="cstat-no" title="statement not covered" >this.url.query = this.options.query;</span>
+<span class="cstat-no" title="statement not covered">  if (this.options.query &amp;&amp; !this.url.query) {</span>
+<span class="cstat-no" title="statement not covered">    if (typeof this.options.query == 'object')</span>
+<span class="cstat-no" title="statement not covered">      this.url.query = qs.stringify(this.options.query);</span>
+    else <span class="cstat-no" title="statement not covered">this.url.query = this.options.query;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this._applyAuth();</span>
+<span class="cstat-no" title="statement not covered">  this._applyAuth();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (this.options.multipart) {</span>
-<span class="cstat-no" title="statement not covered" >    this.headers['Content-Type'] = 'multipart/form-data; boundary=' + multipart.defaultBoundary;</span>
-<span class="cstat-no" title="statement not covered" >    var multipart_size = multipart.sizeOf(this.options.data, multipart.defaultBoundary);</span>
-<span class="cstat-no" title="statement not covered" >    if (typeof multipart_size === 'number' &amp;&amp; multipart_size === multipart_size) {</span>
-<span class="cstat-no" title="statement not covered" >        this.headers['Content-Length'] = multipart_size;</span>
+<span class="cstat-no" title="statement not covered">  if (this.options.multipart) {</span>
+<span class="cstat-no" title="statement not covered">    this.headers['Content-Type'] = 'multipart/form-data; boundary=' + multipart.defaultBoundary;</span>
+<span class="cstat-no" title="statement not covered">    var multipart_size = multipart.sizeOf(this.options.data, multipart.defaultBoundary);</span>
+<span class="cstat-no" title="statement not covered">    if (typeof multipart_size === 'number' &amp;&amp; multipart_size === multipart_size) {</span>
+<span class="cstat-no" title="statement not covered">        this.headers['Content-Length'] = multipart_size;</span>
     }
     else {
-<span class="cstat-no" title="statement not covered" >        console.log("Building multipart request without Content-Length header, please specify all file sizes");</span>
+<span class="cstat-no" title="statement not covered">        console.log("Building multipart request without Content-Length header, please specify all file sizes");</span>
     }
   } else {
-<span class="cstat-no" title="statement not covered" >    if (typeof this.options.data == 'object' &amp;&amp; !Buffer.isBuffer(this.options.data)) {</span>
-<span class="cstat-no" title="statement not covered" >      this.options.data = qs.stringify(this.options.data);</span>
-<span class="cstat-no" title="statement not covered" >      this.headers['Content-Type'] = 'application/x-www-form-urlencoded';</span>
-<span class="cstat-no" title="statement not covered" >      this.headers['Content-Length'] = this.options.data.length;</span>
+<span class="cstat-no" title="statement not covered">    if (typeof this.options.data == 'object' &amp;&amp; !Buffer.isBuffer(this.options.data)) {</span>
+<span class="cstat-no" title="statement not covered">      this.options.data = qs.stringify(this.options.data);</span>
+<span class="cstat-no" title="statement not covered">      this.headers['Content-Type'] = 'application/x-www-form-urlencoded';</span>
+<span class="cstat-no" title="statement not covered">      this.headers['Content-Length'] = this.options.data.length;</span>
     }
-<span class="cstat-no" title="statement not covered" >    if (typeof this.options.data == 'string') {</span>
-<span class="cstat-no" title="statement not covered" >      var buffer = new Buffer(this.options.data, this.options.encoding || 'utf8');</span>
-<span class="cstat-no" title="statement not covered" >      this.options.data = buffer;</span>
-<span class="cstat-no" title="statement not covered" >      this.headers['Content-Length'] = buffer.length;</span>
+<span class="cstat-no" title="statement not covered">    if (typeof this.options.data == 'string') {</span>
+<span class="cstat-no" title="statement not covered">      var buffer = new Buffer(this.options.data, this.options.encoding || 'utf8');</span>
+<span class="cstat-no" title="statement not covered">      this.options.data = buffer;</span>
+<span class="cstat-no" title="statement not covered">      this.headers['Content-Length'] = buffer.length;</span>
     }
-<span class="cstat-no" title="statement not covered" >    if (!this.options.data) {</span>
-<span class="cstat-no" title="statement not covered" >      this.headers['Content-Length'] = 0;</span>
+<span class="cstat-no" title="statement not covered">    if (!this.options.data) {</span>
+<span class="cstat-no" title="statement not covered">      this.headers['Content-Length'] = 0;</span>
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var proto = (this.url.protocol == 'https:') ? https : http;</span>
+<span class="cstat-no" title="statement not covered">  var proto = (this.url.protocol == 'https:') ? https : http;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this.request = proto.request({</span>
+<span class="cstat-no" title="statement not covered">  this.request = proto.request({</span>
     host: this.url.hostname,
     port: this.url.port,
     path: this._fullPath(),
@@ -1384,340 +1382,340 @@ function mixin(target, source) {
     agent: this.options.agent
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this._makeRequest();</span>
+<span class="cstat-no" title="statement not covered">  this._makeRequest();</span>
 }
 &nbsp;
 util.inherits(Request, events.EventEmitter);
 &nbsp;
 mixin(Request.prototype, {
-  _isRedirect: <span class="fstat-no" title="function not covered" >function(response) {</span>
-<span class="cstat-no" title="statement not covered" >    return ([301, 302, 303, 307].indexOf(response.statusCode) &gt;= 0);</span>
+  _isRedirect: <span class="fstat-no" title="function not covered">function(response) {</span>
+<span class="cstat-no" title="statement not covered">    return ([301, 302, 303, 307].indexOf(response.statusCode) &gt;= 0);</span>
   },
-  _fullPath: <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >    var path = this.url.pathname || '/';</span>
-<span class="cstat-no" title="statement not covered" >    if (this.url.hash) <span class="cstat-no" title="statement not covered" >path += this.url.hash;</span></span>
-<span class="cstat-no" title="statement not covered" >    if (this.url.query) <span class="cstat-no" title="statement not covered" >path += '?' + this.url.query;</span></span>
-<span class="cstat-no" title="statement not covered" >    return path;</span>
+  _fullPath: <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">    var path = this.url.pathname || '/';</span>
+<span class="cstat-no" title="statement not covered">    if (this.url.hash) <span class="cstat-no" title="statement not covered">path += this.url.hash;</span></span>
+<span class="cstat-no" title="statement not covered">    if (this.url.query) <span class="cstat-no" title="statement not covered">path += '?' + this.url.query;</span></span>
+<span class="cstat-no" title="statement not covered">    return path;</span>
   },
-  _applyAuth: <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >    var authParts;</span>
+  _applyAuth: <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">    var authParts;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (this.url.auth) {</span>
-<span class="cstat-no" title="statement not covered" >      authParts = this.url.auth.split(':');</span>
-<span class="cstat-no" title="statement not covered" >      this.options.username = authParts[0];</span>
-<span class="cstat-no" title="statement not covered" >      this.options.password = authParts[1];</span>
+<span class="cstat-no" title="statement not covered">    if (this.url.auth) {</span>
+<span class="cstat-no" title="statement not covered">      authParts = this.url.auth.split(':');</span>
+<span class="cstat-no" title="statement not covered">      this.options.username = authParts[0];</span>
+<span class="cstat-no" title="statement not covered">      this.options.password = authParts[1];</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (this.options.username &amp;&amp; this.options.password !== undefined) {</span>
-<span class="cstat-no" title="statement not covered" >      var b = new Buffer([this.options.username, this.options.password].join(':'));</span>
-<span class="cstat-no" title="statement not covered" >      this.headers['Authorization'] = "Basic " + b.toString('base64');</span>
-    } else <span class="cstat-no" title="statement not covered" >if (this.options.accessToken) {</span>
-<span class="cstat-no" title="statement not covered" >      this.headers['Authorization'] = "Bearer " + this.options.accessToken;</span>
+<span class="cstat-no" title="statement not covered">    if (this.options.username &amp;&amp; this.options.password !== undefined) {</span>
+<span class="cstat-no" title="statement not covered">      var b = new Buffer([this.options.username, this.options.password].join(':'));</span>
+<span class="cstat-no" title="statement not covered">      this.headers['Authorization'] = "Basic " + b.toString('base64');</span>
+    } else <span class="cstat-no" title="statement not covered">if (this.options.accessToken) {</span>
+<span class="cstat-no" title="statement not covered">      this.headers['Authorization'] = "Bearer " + this.options.accessToken;</span>
     }
   },
-  _responseHandler: <span class="fstat-no" title="function not covered" >function(response) {</span>
-<span class="cstat-no" title="statement not covered" >    var self = this;</span>
+  _responseHandler: <span class="fstat-no" title="function not covered">function(response) {</span>
+<span class="cstat-no" title="statement not covered">    var self = this;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (self._isRedirect(response) &amp;&amp; self.options.followRedirects) {</span>
-<span class="cstat-no" title="statement not covered" >      try {</span>
+<span class="cstat-no" title="statement not covered">    if (self._isRedirect(response) &amp;&amp; self.options.followRedirects) {</span>
+<span class="cstat-no" title="statement not covered">      try {</span>
         // 303 should redirect and retrieve content with the GET method
         // http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.4
-<span class="cstat-no" title="statement not covered" >        if (response.statusCode === 303) {</span>
-<span class="cstat-no" title="statement not covered" >            self.url    = url.parse(url.resolve(self.url.href, response.headers['location']));</span>
-<span class="cstat-no" title="statement not covered" >            self.options.method = 'GET';</span>
-<span class="cstat-no" title="statement not covered" >            delete self.options.data;</span>
-<span class="cstat-no" title="statement not covered" >            self._retry();</span>
+<span class="cstat-no" title="statement not covered">        if (response.statusCode === 303) {</span>
+<span class="cstat-no" title="statement not covered">            self.url    = url.parse(url.resolve(self.url.href, response.headers['location']));</span>
+<span class="cstat-no" title="statement not covered">            self.options.method = 'GET';</span>
+<span class="cstat-no" title="statement not covered">            delete self.options.data;</span>
+<span class="cstat-no" title="statement not covered">            self._retry();</span>
         } else {
-<span class="cstat-no" title="statement not covered" >            self.url = url.parse(url.resolve(self.url.href, response.headers['location']));</span>
-<span class="cstat-no" title="statement not covered" >            self._retry();</span>
+<span class="cstat-no" title="statement not covered">            self.url = url.parse(url.resolve(self.url.href, response.headers['location']));</span>
+<span class="cstat-no" title="statement not covered">            self._retry();</span>
             // todo handle somehow infinite redirects
         }
       } catch(err) {
-<span class="cstat-no" title="statement not covered" >        err.message = 'Failed to follow redirect: ' + err.message;</span>
-<span class="cstat-no" title="statement not covered" >        self._fireError(err, response);</span>
+<span class="cstat-no" title="statement not covered">        err.message = 'Failed to follow redirect: ' + err.message;</span>
+<span class="cstat-no" title="statement not covered">        self._fireError(err, response);</span>
       }
     } else {
-<span class="cstat-no" title="statement not covered" >      var body = '';</span>
+<span class="cstat-no" title="statement not covered">      var body = '';</span>
 &nbsp;
       // When using browserify, response.setEncoding is not defined
-<span class="cstat-no" title="statement not covered" >      if (typeof response.setEncoding == 'function')</span>
-<span class="cstat-no" title="statement not covered" >        response.setEncoding('binary');</span>
+<span class="cstat-no" title="statement not covered">      if (typeof response.setEncoding == 'function')</span>
+<span class="cstat-no" title="statement not covered">        response.setEncoding('binary');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      response.on('data', <span class="fstat-no" title="function not covered" >function(chunk) {</span></span>
-<span class="cstat-no" title="statement not covered" >        body += chunk;</span>
+<span class="cstat-no" title="statement not covered">      response.on('data', <span class="fstat-no" title="function not covered">function(chunk) {</span></span>
+<span class="cstat-no" title="statement not covered">        body += chunk;</span>
       });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      response.on('end', <span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >        response.rawEncoded = body;</span>
-<span class="cstat-no" title="statement not covered" >        self._decode(new Buffer(body, 'binary'), response, <span class="fstat-no" title="function not covered" >function(err, body) {</span></span>
-<span class="cstat-no" title="statement not covered" >          if (err) {</span>
-<span class="cstat-no" title="statement not covered" >            self._fireError(err, response);</span>
-<span class="cstat-no" title="statement not covered" >            return;</span>
+<span class="cstat-no" title="statement not covered">      response.on('end', <span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">        response.rawEncoded = body;</span>
+<span class="cstat-no" title="statement not covered">        self._decode(new Buffer(body, 'binary'), response, <span class="fstat-no" title="function not covered">function(err, body) {</span></span>
+<span class="cstat-no" title="statement not covered">          if (err) {</span>
+<span class="cstat-no" title="statement not covered">            self._fireError(err, response);</span>
+<span class="cstat-no" title="statement not covered">            return;</span>
           }
-<span class="cstat-no" title="statement not covered" >          response.raw = body;</span>
-<span class="cstat-no" title="statement not covered" >          body = self._iconv(body, response);</span>
-<span class="cstat-no" title="statement not covered" >          self._encode(body, response, <span class="fstat-no" title="function not covered" >function(err, body) {</span></span>
-<span class="cstat-no" title="statement not covered" >            if (err) {</span>
-<span class="cstat-no" title="statement not covered" >              self._fireError(err, response);</span>
+<span class="cstat-no" title="statement not covered">          response.raw = body;</span>
+<span class="cstat-no" title="statement not covered">          body = self._iconv(body, response);</span>
+<span class="cstat-no" title="statement not covered">          self._encode(body, response, <span class="fstat-no" title="function not covered">function(err, body) {</span></span>
+<span class="cstat-no" title="statement not covered">            if (err) {</span>
+<span class="cstat-no" title="statement not covered">              self._fireError(err, response);</span>
             } else {
-<span class="cstat-no" title="statement not covered" >              self._fireSuccess(body, response);</span>
+<span class="cstat-no" title="statement not covered">              self._fireSuccess(body, response);</span>
             }
           });
         });
       });
     }
   },
-  _decode: <span class="fstat-no" title="function not covered" >function(body, response, callback) {</span>
-<span class="cstat-no" title="statement not covered" >    var decoder = response.headers['content-encoding'];</span>
-<span class="cstat-no" title="statement not covered" >    if (decoder in decoders) {</span>
-<span class="cstat-no" title="statement not covered" >      decoders[decoder].call(response, body, callback);</span>
+  _decode: <span class="fstat-no" title="function not covered">function(body, response, callback) {</span>
+<span class="cstat-no" title="statement not covered">    var decoder = response.headers['content-encoding'];</span>
+<span class="cstat-no" title="statement not covered">    if (decoder in decoders) {</span>
+<span class="cstat-no" title="statement not covered">      decoders[decoder].call(response, body, callback);</span>
     } else {
-<span class="cstat-no" title="statement not covered" >      callback(null, body);</span>
+<span class="cstat-no" title="statement not covered">      callback(null, body);</span>
     }
   },
-  _iconv: <span class="fstat-no" title="function not covered" >function(body, response) {</span>
-<span class="cstat-no" title="statement not covered" >    var charset = response.headers['content-type'];</span>
-<span class="cstat-no" title="statement not covered" >    if (charset) {</span>
-<span class="cstat-no" title="statement not covered" >      charset = /\bcharset=(.+)(?:;|$)/i.exec(charset);</span>
-<span class="cstat-no" title="statement not covered" >      if (charset) {</span>
-<span class="cstat-no" title="statement not covered" >        charset = charset[1].trim().toUpperCase();</span>
-<span class="cstat-no" title="statement not covered" >        if (charset != 'UTF-8') {</span>
-<span class="cstat-no" title="statement not covered" >          try {</span>
-<span class="cstat-no" title="statement not covered" >            return iconv.decode(body, charset);</span>
+  _iconv: <span class="fstat-no" title="function not covered">function(body, response) {</span>
+<span class="cstat-no" title="statement not covered">    var charset = response.headers['content-type'];</span>
+<span class="cstat-no" title="statement not covered">    if (charset) {</span>
+<span class="cstat-no" title="statement not covered">      charset = /\bcharset=(.+)(?:;|$)/i.exec(charset);</span>
+<span class="cstat-no" title="statement not covered">      if (charset) {</span>
+<span class="cstat-no" title="statement not covered">        charset = charset[1].trim().toUpperCase();</span>
+<span class="cstat-no" title="statement not covered">        if (charset != 'UTF-8') {</span>
+<span class="cstat-no" title="statement not covered">          try {</span>
+<span class="cstat-no" title="statement not covered">            return iconv.decode(body, charset);</span>
           } catch (err) {}
         }
       }
     }
-<span class="cstat-no" title="statement not covered" >    return body;</span>
+<span class="cstat-no" title="statement not covered">    return body;</span>
   },
-  _encode: <span class="fstat-no" title="function not covered" >function(body, response, callback) {</span>
-<span class="cstat-no" title="statement not covered" >    var self = this;</span>
-<span class="cstat-no" title="statement not covered" >    if (self.options.decoding == 'buffer') {</span>
-<span class="cstat-no" title="statement not covered" >      callback(null, body);</span>
+  _encode: <span class="fstat-no" title="function not covered">function(body, response, callback) {</span>
+<span class="cstat-no" title="statement not covered">    var self = this;</span>
+<span class="cstat-no" title="statement not covered">    if (self.options.decoding == 'buffer') {</span>
+<span class="cstat-no" title="statement not covered">      callback(null, body);</span>
     } else {
-<span class="cstat-no" title="statement not covered" >      body = body.toString(self.options.decoding);</span>
-<span class="cstat-no" title="statement not covered" >      if (self.options.parser) {</span>
-<span class="cstat-no" title="statement not covered" >        self.options.parser.call(response, body, callback);</span>
+<span class="cstat-no" title="statement not covered">      body = body.toString(self.options.decoding);</span>
+<span class="cstat-no" title="statement not covered">      if (self.options.parser) {</span>
+<span class="cstat-no" title="statement not covered">        self.options.parser.call(response, body, callback);</span>
       } else {
-<span class="cstat-no" title="statement not covered" >        callback(null, body);</span>
+<span class="cstat-no" title="statement not covered">        callback(null, body);</span>
       }
     }
   },
-  _fireError: <span class="fstat-no" title="function not covered" >function(err, response) {</span>
-<span class="cstat-no" title="statement not covered" >    this._fireCancelTimeout();</span>
-<span class="cstat-no" title="statement not covered" >    this.emit('error', err, response);</span>
-<span class="cstat-no" title="statement not covered" >    this.emit('complete', err, response);</span>
+  _fireError: <span class="fstat-no" title="function not covered">function(err, response) {</span>
+<span class="cstat-no" title="statement not covered">    this._fireCancelTimeout();</span>
+<span class="cstat-no" title="statement not covered">    this.emit('error', err, response);</span>
+<span class="cstat-no" title="statement not covered">    this.emit('complete', err, response);</span>
   },
-  _fireCancelTimeout: <span class="fstat-no" title="function not covered" >function(){</span>
-<span class="cstat-no" title="statement not covered" >    var self = this;</span>
-<span class="cstat-no" title="statement not covered" >    if(self.options.timeout){</span>
-<span class="cstat-no" title="statement not covered" >      clearTimeout(self.options.timeoutFn);</span>
+  _fireCancelTimeout: <span class="fstat-no" title="function not covered">function(){</span>
+<span class="cstat-no" title="statement not covered">    var self = this;</span>
+<span class="cstat-no" title="statement not covered">    if(self.options.timeout){</span>
+<span class="cstat-no" title="statement not covered">      clearTimeout(self.options.timeoutFn);</span>
     }
   },
-  _fireTimeout: <span class="fstat-no" title="function not covered" >function(err){</span>
-<span class="cstat-no" title="statement not covered" >    this.emit('timeout', err);</span>
-<span class="cstat-no" title="statement not covered" >    this.aborted = true;</span>
-<span class="cstat-no" title="statement not covered" >    this.timedout = true;</span>
-<span class="cstat-no" title="statement not covered" >    this.request.abort();</span>
+  _fireTimeout: <span class="fstat-no" title="function not covered">function(err){</span>
+<span class="cstat-no" title="statement not covered">    this.emit('timeout', err);</span>
+<span class="cstat-no" title="statement not covered">    this.aborted = true;</span>
+<span class="cstat-no" title="statement not covered">    this.timedout = true;</span>
+<span class="cstat-no" title="statement not covered">    this.request.abort();</span>
   },
-  _fireSuccess: <span class="fstat-no" title="function not covered" >function(body, response) {</span>
-<span class="cstat-no" title="statement not covered" >    if (parseInt(response.statusCode) &gt;= 400) {</span>
-<span class="cstat-no" title="statement not covered" >      this.emit('fail', body, response);</span>
+  _fireSuccess: <span class="fstat-no" title="function not covered">function(body, response) {</span>
+<span class="cstat-no" title="statement not covered">    if (parseInt(response.statusCode) &gt;= 400) {</span>
+<span class="cstat-no" title="statement not covered">      this.emit('fail', body, response);</span>
     } else {
-<span class="cstat-no" title="statement not covered" >      this.emit('success', body, response);</span>
+<span class="cstat-no" title="statement not covered">      this.emit('success', body, response);</span>
     }
-<span class="cstat-no" title="statement not covered" >    this.emit(response.statusCode.toString().replace(/\d{2}$/, 'XX'), body, response);</span>
-<span class="cstat-no" title="statement not covered" >    this.emit(response.statusCode.toString(), body, response);</span>
-<span class="cstat-no" title="statement not covered" >    this.emit('complete', body, response);</span>
+<span class="cstat-no" title="statement not covered">    this.emit(response.statusCode.toString().replace(/\d{2}$/, 'XX'), body, response);</span>
+<span class="cstat-no" title="statement not covered">    this.emit(response.statusCode.toString(), body, response);</span>
+<span class="cstat-no" title="statement not covered">    this.emit('complete', body, response);</span>
   },
-  _makeRequest: <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >    var self = this;</span>
-<span class="cstat-no" title="statement not covered" >    var timeoutMs = self.options.timeout;</span>
-<span class="cstat-no" title="statement not covered" >    if(timeoutMs){</span>
-<span class="cstat-no" title="statement not covered" >      self.options.timeoutFn = setTimeout(<span class="fstat-no" title="function not covered" >function(){</span></span>
-<span class="cstat-no" title="statement not covered" >        self._fireTimeout(timeoutMs);</span>
+  _makeRequest: <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">    var self = this;</span>
+<span class="cstat-no" title="statement not covered">    var timeoutMs = self.options.timeout;</span>
+<span class="cstat-no" title="statement not covered">    if(timeoutMs){</span>
+<span class="cstat-no" title="statement not covered">      self.options.timeoutFn = setTimeout(<span class="fstat-no" title="function not covered">function(){</span></span>
+<span class="cstat-no" title="statement not covered">        self._fireTimeout(timeoutMs);</span>
       },timeoutMs);
     }
-<span class="cstat-no" title="statement not covered" >    this.request.on('response', <span class="fstat-no" title="function not covered" >function(response) {</span></span>
-<span class="cstat-no" title="statement not covered" >      self._fireCancelTimeout();</span>
-<span class="cstat-no" title="statement not covered" >      self.emit('response', response);</span>
-<span class="cstat-no" title="statement not covered" >      self._responseHandler(response);</span>
-    }).on('error', <span class="fstat-no" title="function not covered" >function(err) {</span>
-<span class="cstat-no" title="statement not covered" >      self._fireCancelTimeout();</span>
-<span class="cstat-no" title="statement not covered" >      if (!self.aborted) {</span>
-<span class="cstat-no" title="statement not covered" >        self._fireError(err, null);</span>
+<span class="cstat-no" title="statement not covered">    this.request.on('response', <span class="fstat-no" title="function not covered">function(response) {</span></span>
+<span class="cstat-no" title="statement not covered">      self._fireCancelTimeout();</span>
+<span class="cstat-no" title="statement not covered">      self.emit('response', response);</span>
+<span class="cstat-no" title="statement not covered">      self._responseHandler(response);</span>
+    }).on('error', <span class="fstat-no" title="function not covered">function(err) {</span>
+<span class="cstat-no" title="statement not covered">      self._fireCancelTimeout();</span>
+<span class="cstat-no" title="statement not covered">      if (!self.aborted) {</span>
+<span class="cstat-no" title="statement not covered">        self._fireError(err, null);</span>
       }
     });
   },
-  _retry: <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >    this.request.removeAllListeners().on('error', <span class="fstat-no" title="function not covered" >function() {</span>});</span>
-<span class="cstat-no" title="statement not covered" >    if (this.request.finished) {</span>
-<span class="cstat-no" title="statement not covered" >      this.request.abort();</span>
+  _retry: <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">    this.request.removeAllListeners().on('error', <span class="fstat-no" title="function not covered">function() {</span>});</span>
+<span class="cstat-no" title="statement not covered">    if (this.request.finished) {</span>
+<span class="cstat-no" title="statement not covered">      this.request.abort();</span>
     }
-<span class="cstat-no" title="statement not covered" >    Request.call(this, this.url.href, this.options); </span>// reusing request object to handle recursive calls and remember listeners
-<span class="cstat-no" title="statement not covered" >    this.run();</span>
+<span class="cstat-no" title="statement not covered">    Request.call(this, this.url.href, this.options); </span>// reusing request object to handle recursive calls and remember listeners
+<span class="cstat-no" title="statement not covered">    this.run();</span>
   },
-  run: <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >    var self = this;</span>
-<span class="cstat-no" title="statement not covered" >    if (this.options.multipart) {</span>
-<span class="cstat-no" title="statement not covered" >      multipart.write(this.request, this.options.data, <span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >        self.request.end();</span>
+  run: <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">    var self = this;</span>
+<span class="cstat-no" title="statement not covered">    if (this.options.multipart) {</span>
+<span class="cstat-no" title="statement not covered">      multipart.write(this.request, this.options.data, <span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">        self.request.end();</span>
       });
     } else {
-<span class="cstat-no" title="statement not covered" >      if (this.options.data) {</span>
-<span class="cstat-no" title="statement not covered" >        this.request.write(this.options.data, this.options.encoding || 'utf8');</span>
+<span class="cstat-no" title="statement not covered">      if (this.options.data) {</span>
+<span class="cstat-no" title="statement not covered">        this.request.write(this.options.data, this.options.encoding || 'utf8');</span>
       }
-<span class="cstat-no" title="statement not covered" >      this.request.end();</span>
+<span class="cstat-no" title="statement not covered">      this.request.end();</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return this;</span>
+<span class="cstat-no" title="statement not covered">    return this;</span>
   },
-  abort: <span class="fstat-no" title="function not covered" >function(err) {</span>
-<span class="cstat-no" title="statement not covered" >    var self = this;</span>
+  abort: <span class="fstat-no" title="function not covered">function(err) {</span>
+<span class="cstat-no" title="statement not covered">    var self = this;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (err) {</span>
-<span class="cstat-no" title="statement not covered" >      if (typeof err == 'string') {</span>
-<span class="cstat-no" title="statement not covered" >        err = new Error(err);</span>
-      } else <span class="cstat-no" title="statement not covered" >if (!(err instanceof Error)) {</span>
-<span class="cstat-no" title="statement not covered" >        err = new Error('AbortError');</span>
+<span class="cstat-no" title="statement not covered">    if (err) {</span>
+<span class="cstat-no" title="statement not covered">      if (typeof err == 'string') {</span>
+<span class="cstat-no" title="statement not covered">        err = new Error(err);</span>
+      } else <span class="cstat-no" title="statement not covered">if (!(err instanceof Error)) {</span>
+<span class="cstat-no" title="statement not covered">        err = new Error('AbortError');</span>
       }
-<span class="cstat-no" title="statement not covered" >      err.type = 'abort';</span>
+<span class="cstat-no" title="statement not covered">      err.type = 'abort';</span>
     } else {
-<span class="cstat-no" title="statement not covered" >      err = null;</span>
+<span class="cstat-no" title="statement not covered">      err = null;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    self.request.on('close', <span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >      if (err) {</span>
-<span class="cstat-no" title="statement not covered" >        self._fireError(err, null);</span>
+<span class="cstat-no" title="statement not covered">    self.request.on('close', <span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">      if (err) {</span>
+<span class="cstat-no" title="statement not covered">        self._fireError(err, null);</span>
       } else {
-<span class="cstat-no" title="statement not covered" >        self.emit('complete', null, null);</span>
+<span class="cstat-no" title="statement not covered">        self.emit('complete', null, null);</span>
       }
     });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    self.aborted = true;</span>
-<span class="cstat-no" title="statement not covered" >    self.request.abort();</span>
-<span class="cstat-no" title="statement not covered" >    self.emit('abort', err);</span>
-<span class="cstat-no" title="statement not covered" >    return this;</span>
+<span class="cstat-no" title="statement not covered">    self.aborted = true;</span>
+<span class="cstat-no" title="statement not covered">    self.request.abort();</span>
+<span class="cstat-no" title="statement not covered">    self.emit('abort', err);</span>
+<span class="cstat-no" title="statement not covered">    return this;</span>
   },
-  retry: <span class="fstat-no" title="function not covered" >function(timeout) {</span>
-<span class="cstat-no" title="statement not covered" >    var self = this;</span>
-<span class="cstat-no" title="statement not covered" >    timeout = parseInt(timeout);</span>
-<span class="cstat-no" title="statement not covered" >    var fn = self._retry.bind(self);</span>
-<span class="cstat-no" title="statement not covered" >    if (!isFinite(timeout) || timeout &lt;= 0) {</span>
-<span class="cstat-no" title="statement not covered" >      process.nextTick(fn, timeout);</span>
+  retry: <span class="fstat-no" title="function not covered">function(timeout) {</span>
+<span class="cstat-no" title="statement not covered">    var self = this;</span>
+<span class="cstat-no" title="statement not covered">    timeout = parseInt(timeout);</span>
+<span class="cstat-no" title="statement not covered">    var fn = self._retry.bind(self);</span>
+<span class="cstat-no" title="statement not covered">    if (!isFinite(timeout) || timeout &lt;= 0) {</span>
+<span class="cstat-no" title="statement not covered">      process.nextTick(fn, timeout);</span>
     } else {
-<span class="cstat-no" title="statement not covered" >      setTimeout(fn, timeout);</span>
+<span class="cstat-no" title="statement not covered">      setTimeout(fn, timeout);</span>
     }
-<span class="cstat-no" title="statement not covered" >    return this;</span>
+<span class="cstat-no" title="statement not covered">    return this;</span>
   }
 });
 &nbsp;
-<span class="fstat-no" title="function not covered" >function shortcutOptions(options, method) {</span>
-<span class="cstat-no" title="statement not covered" >  options = options || {};</span>
-<span class="cstat-no" title="statement not covered" >  options.method = method;</span>
-<span class="cstat-no" title="statement not covered" >  options.parser = (typeof options.parser !== "undefined") ? options.parser : parsers.auto;</span>
-<span class="cstat-no" title="statement not covered" >  parsers.xml.options = (typeof options.xml2js == 'undefined') ? {} : options.xml2js;</span>
-<span class="cstat-no" title="statement not covered" >  return options;</span>
+<span class="fstat-no" title="function not covered">function shortcutOptions(options, method) {</span>
+<span class="cstat-no" title="statement not covered">  options = options || {};</span>
+<span class="cstat-no" title="statement not covered">  options.method = method;</span>
+<span class="cstat-no" title="statement not covered">  options.parser = (typeof options.parser !== "undefined") ? options.parser : parsers.auto;</span>
+<span class="cstat-no" title="statement not covered">  parsers.xml.options = (typeof options.xml2js == 'undefined') ? {} : options.xml2js;</span>
+<span class="cstat-no" title="statement not covered">  return options;</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function request(url, options) {</span>
-<span class="cstat-no" title="statement not covered" >  var request = new Request(url, options);</span>
-<span class="cstat-no" title="statement not covered" >  request.on('error', <span class="fstat-no" title="function not covered" >function() {</span>});</span>
-<span class="cstat-no" title="statement not covered" >  process.nextTick(request.run.bind(request));</span>
-<span class="cstat-no" title="statement not covered" >  return request;</span>
+<span class="fstat-no" title="function not covered">function request(url, options) {</span>
+<span class="cstat-no" title="statement not covered">  var request = new Request(url, options);</span>
+<span class="cstat-no" title="statement not covered">  request.on('error', <span class="fstat-no" title="function not covered">function() {</span>});</span>
+<span class="cstat-no" title="statement not covered">  process.nextTick(request.run.bind(request));</span>
+<span class="cstat-no" title="statement not covered">  return request;</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function get(url, options) {</span>
-<span class="cstat-no" title="statement not covered" > return request(url, shortcutOptions(options, 'GET'));</span>
+<span class="fstat-no" title="function not covered">function get(url, options) {</span>
+<span class="cstat-no" title="statement not covered"> return request(url, shortcutOptions(options, 'GET'));</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function patch(url, options) {</span>
-<span class="cstat-no" title="statement not covered" >  return request(url, shortcutOptions(options, 'PATCH'));</span>
+<span class="fstat-no" title="function not covered">function patch(url, options) {</span>
+<span class="cstat-no" title="statement not covered">  return request(url, shortcutOptions(options, 'PATCH'));</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function post(url, options) {</span>
-<span class="cstat-no" title="statement not covered" >  return request(url, shortcutOptions(options, 'POST'));</span>
+<span class="fstat-no" title="function not covered">function post(url, options) {</span>
+<span class="cstat-no" title="statement not covered">  return request(url, shortcutOptions(options, 'POST'));</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function put(url, options) {</span>
-<span class="cstat-no" title="statement not covered" >  return request(url, shortcutOptions(options, 'PUT'));</span>
+<span class="fstat-no" title="function not covered">function put(url, options) {</span>
+<span class="cstat-no" title="statement not covered">  return request(url, shortcutOptions(options, 'PUT'));</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function del(url, options) {</span>
-<span class="cstat-no" title="statement not covered" >  return request(url, shortcutOptions(options, 'DELETE'));</span>
+<span class="fstat-no" title="function not covered">function del(url, options) {</span>
+<span class="cstat-no" title="statement not covered">  return request(url, shortcutOptions(options, 'DELETE'));</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function head(url, options) {</span>
-<span class="cstat-no" title="statement not covered" >  return request(url, shortcutOptions(options, 'HEAD'));</span>
+<span class="fstat-no" title="function not covered">function head(url, options) {</span>
+<span class="cstat-no" title="statement not covered">  return request(url, shortcutOptions(options, 'HEAD'));</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function json(url, data, options, method) {</span>
-<span class="cstat-no" title="statement not covered" >  options = options || {};</span>
-<span class="cstat-no" title="statement not covered" >  options.parser = (typeof options.parser !== "undefined") ? options.parser : parsers.auto;</span>
-<span class="cstat-no" title="statement not covered" >  options.headers = options.headers || {};</span>
-<span class="cstat-no" title="statement not covered" >  options.headers['content-type'] = 'application/json';</span>
-<span class="cstat-no" title="statement not covered" >  options.data = JSON.stringify(data || {});</span>
-<span class="cstat-no" title="statement not covered" >  options.method = method || 'GET';</span>
-<span class="cstat-no" title="statement not covered" >  return request(url, options);</span>
+<span class="fstat-no" title="function not covered">function json(url, data, options, method) {</span>
+<span class="cstat-no" title="statement not covered">  options = options || {};</span>
+<span class="cstat-no" title="statement not covered">  options.parser = (typeof options.parser !== "undefined") ? options.parser : parsers.auto;</span>
+<span class="cstat-no" title="statement not covered">  options.headers = options.headers || {};</span>
+<span class="cstat-no" title="statement not covered">  options.headers['content-type'] = 'application/json';</span>
+<span class="cstat-no" title="statement not covered">  options.data = JSON.stringify(data || {});</span>
+<span class="cstat-no" title="statement not covered">  options.method = method || 'GET';</span>
+<span class="cstat-no" title="statement not covered">  return request(url, options);</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function postJson(url, data, options) {</span>
-<span class="cstat-no" title="statement not covered" >  return json(url, data, options, 'POST');</span>
+<span class="fstat-no" title="function not covered">function postJson(url, data, options) {</span>
+<span class="cstat-no" title="statement not covered">  return json(url, data, options, 'POST');</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function putJson(url, data, options) {</span>
-<span class="cstat-no" title="statement not covered" >  return json(url, data, options, 'PUT');</span>
+<span class="fstat-no" title="function not covered">function putJson(url, data, options) {</span>
+<span class="cstat-no" title="statement not covered">  return json(url, data, options, 'PUT');</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function patchJson(url, data, options) {</span>
-<span class="cstat-no" title="statement not covered" >  return json(url, data, options, 'PATCH');</span>
+<span class="fstat-no" title="function not covered">function patchJson(url, data, options) {</span>
+<span class="cstat-no" title="statement not covered">  return json(url, data, options, 'PATCH');</span>
 }
 &nbsp;
 var parsers = {
-  auto: <span class="fstat-no" title="function not covered" >function(data, callback) {</span>
-<span class="cstat-no" title="statement not covered" >    var contentType = this.headers['content-type'];</span>
-<span class="cstat-no" title="statement not covered" >    var contentParser;</span>
-<span class="cstat-no" title="statement not covered" >    if (contentType) {</span>
-<span class="cstat-no" title="statement not covered" >      contentType = contentType.replace(/;.+/, ''); </span>// remove all except mime type (eg. text/html; charset=UTF-8)
-<span class="cstat-no" title="statement not covered" >      if (contentType in parsers.auto.matchers) {</span>
-<span class="cstat-no" title="statement not covered" >        contentParser = parsers.auto.matchers[contentType];</span>
+  auto: <span class="fstat-no" title="function not covered">function(data, callback) {</span>
+<span class="cstat-no" title="statement not covered">    var contentType = this.headers['content-type'];</span>
+<span class="cstat-no" title="statement not covered">    var contentParser;</span>
+<span class="cstat-no" title="statement not covered">    if (contentType) {</span>
+<span class="cstat-no" title="statement not covered">      contentType = contentType.replace(/;.+/, ''); </span>// remove all except mime type (eg. text/html; charset=UTF-8)
+<span class="cstat-no" title="statement not covered">      if (contentType in parsers.auto.matchers) {</span>
+<span class="cstat-no" title="statement not covered">        contentParser = parsers.auto.matchers[contentType];</span>
       } else {
         // custom (vendor) mime types
-<span class="cstat-no" title="statement not covered" >        var parts = contentType.match(/^([\w-]+)\/vnd((?:\.(?:[\w-]+))+)\+([\w-]+)$/i);</span>
-<span class="cstat-no" title="statement not covered" >        if (parts) {</span>
-<span class="cstat-no" title="statement not covered" >          var type = parts[1];</span>
-<span class="cstat-no" title="statement not covered" >          var vendors = parts[2].substr(1).split('.');</span>
-<span class="cstat-no" title="statement not covered" >          var subtype = parts[3];</span>
-<span class="cstat-no" title="statement not covered" >          var vendorType;</span>
-<span class="cstat-no" title="statement not covered" >          while (vendors.pop() &amp;&amp; !(vendorType in parsers.auto.matchers)) {</span>
-<span class="cstat-no" title="statement not covered" >            vendorType = vendors.length</span>
+<span class="cstat-no" title="statement not covered">        var parts = contentType.match(/^([\w-]+)\/vnd((?:\.(?:[\w-]+))+)\+([\w-]+)$/i);</span>
+<span class="cstat-no" title="statement not covered">        if (parts) {</span>
+<span class="cstat-no" title="statement not covered">          var type = parts[1];</span>
+<span class="cstat-no" title="statement not covered">          var vendors = parts[2].substr(1).split('.');</span>
+<span class="cstat-no" title="statement not covered">          var subtype = parts[3];</span>
+<span class="cstat-no" title="statement not covered">          var vendorType;</span>
+<span class="cstat-no" title="statement not covered">          while (vendors.pop() &amp;&amp; !(vendorType in parsers.auto.matchers)) {</span>
+<span class="cstat-no" title="statement not covered">            vendorType = vendors.length</span>
               ? type + '/vnd.' + vendors.join('.') + '+' + subtype
               : vendorType = type + '/' + subtype;
           }
-<span class="cstat-no" title="statement not covered" >          contentParser = parsers.auto.matchers[vendorType];</span>
+<span class="cstat-no" title="statement not covered">          contentParser = parsers.auto.matchers[vendorType];</span>
         }
       }
     }
-<span class="cstat-no" title="statement not covered" >    if (typeof contentParser == 'function') {</span>
-<span class="cstat-no" title="statement not covered" >      contentParser.call(this, data, callback);</span>
+<span class="cstat-no" title="statement not covered">    if (typeof contentParser == 'function') {</span>
+<span class="cstat-no" title="statement not covered">      contentParser.call(this, data, callback);</span>
     } else {
-<span class="cstat-no" title="statement not covered" >      callback(null, data);</span>
+<span class="cstat-no" title="statement not covered">      callback(null, data);</span>
     }
   },
-  json: <span class="fstat-no" title="function not covered" >function(data, callback) {</span>
-<span class="cstat-no" title="statement not covered" >    if (data &amp;&amp; data.length) {</span>
-<span class="cstat-no" title="statement not covered" >      var parsedData;</span>
-<span class="cstat-no" title="statement not covered" >      try {</span>
-<span class="cstat-no" title="statement not covered" >        parsedData = JSON.parse(data);</span>
+  json: <span class="fstat-no" title="function not covered">function(data, callback) {</span>
+<span class="cstat-no" title="statement not covered">    if (data &amp;&amp; data.length) {</span>
+<span class="cstat-no" title="statement not covered">      var parsedData;</span>
+<span class="cstat-no" title="statement not covered">      try {</span>
+<span class="cstat-no" title="statement not covered">        parsedData = JSON.parse(data);</span>
       } catch (err) {
-<span class="cstat-no" title="statement not covered" >        err.message = 'Failed to parse JSON body: ' + err.message;</span>
-<span class="cstat-no" title="statement not covered" >        callback(err, null);</span>
+<span class="cstat-no" title="statement not covered">        err.message = 'Failed to parse JSON body: ' + err.message;</span>
+<span class="cstat-no" title="statement not covered">        callback(err, null);</span>
       }
-<span class="cstat-no" title="statement not covered" >      if (parsedData !== undefined) {</span>
-<span class="cstat-no" title="statement not covered" >        callback(null, parsedData);</span>
+<span class="cstat-no" title="statement not covered">      if (parsedData !== undefined) {</span>
+<span class="cstat-no" title="statement not covered">        callback(null, parsedData);</span>
       }
     } else {
-<span class="cstat-no" title="statement not covered" >      callback(null, null);</span>
+<span class="cstat-no" title="statement not covered">      callback(null, null);</span>
     }
   }
 };
@@ -1729,16 +1727,16 @@ parsers.auto.matchers = {
 try {
   var yaml = require('yaml');
 &nbsp;
-  parsers.yaml = <span class="fstat-no" title="function not covered" >function(data, callback) {</span>
-<span class="cstat-no" title="statement not covered" >    if (data) {</span>
-<span class="cstat-no" title="statement not covered" >      try {</span>
-<span class="cstat-no" title="statement not covered" >        callback(null, yaml.eval(data));</span>
+  parsers.yaml = <span class="fstat-no" title="function not covered">function(data, callback) {</span>
+<span class="cstat-no" title="statement not covered">    if (data) {</span>
+<span class="cstat-no" title="statement not covered">      try {</span>
+<span class="cstat-no" title="statement not covered">        callback(null, yaml.eval(data));</span>
       } catch (err) {
-<span class="cstat-no" title="statement not covered" >        err.message = 'Failed to parse YAML body: ' + err.message;</span>
-<span class="cstat-no" title="statement not covered" >        callback(err, null);</span>
+<span class="cstat-no" title="statement not covered">        err.message = 'Failed to parse YAML body: ' + err.message;</span>
+<span class="cstat-no" title="statement not covered">        callback(err, null);</span>
       }
     } else {
-<span class="cstat-no" title="statement not covered" >      callback(null, null);</span>
+<span class="cstat-no" title="statement not covered">      callback(null, null);</span>
     }
   };
 &nbsp;
@@ -1748,17 +1746,17 @@ try {
 try {
   var xml2js = require('xml2js');
 &nbsp;
-  parsers.xml = <span class="fstat-no" title="function not covered" >function(data, callback) {</span>
-<span class="cstat-no" title="statement not covered" >    if (data) {</span>
-<span class="cstat-no" title="statement not covered" >      var parser = new xml2js.Parser(parsers.xml.options);</span>
-<span class="cstat-no" title="statement not covered" >      parser.parseString(data, <span class="fstat-no" title="function not covered" >function(err, data) {</span></span>
-<span class="cstat-no" title="statement not covered" >        if (err) {</span>
-<span class="cstat-no" title="statement not covered" >          err.message = 'Failed to parse XML body: ' + err.message;</span>
+  parsers.xml = <span class="fstat-no" title="function not covered">function(data, callback) {</span>
+<span class="cstat-no" title="statement not covered">    if (data) {</span>
+<span class="cstat-no" title="statement not covered">      var parser = new xml2js.Parser(parsers.xml.options);</span>
+<span class="cstat-no" title="statement not covered">      parser.parseString(data, <span class="fstat-no" title="function not covered">function(err, data) {</span></span>
+<span class="cstat-no" title="statement not covered">        if (err) {</span>
+<span class="cstat-no" title="statement not covered">          err.message = 'Failed to parse XML body: ' + err.message;</span>
         }
-<span class="cstat-no" title="statement not covered" >        callback(err, data);</span>
+<span class="cstat-no" title="statement not covered">        callback(err, data);</span>
       });
     } else {
-<span class="cstat-no" title="statement not covered" >      callback(null, null);</span>
+<span class="cstat-no" title="statement not covered">      callback(null, null);</span>
     }
   };
 &nbsp;
@@ -1766,60 +1764,60 @@ try {
 } catch(e) { }
 &nbsp;
 var decoders = {
-  gzip: <span class="fstat-no" title="function not covered" >function(buf, callback) {</span>
-<span class="cstat-no" title="statement not covered" >    zlib.gunzip(buf, callback);</span>
+  gzip: <span class="fstat-no" title="function not covered">function(buf, callback) {</span>
+<span class="cstat-no" title="statement not covered">    zlib.gunzip(buf, callback);</span>
   },
-  deflate: <span class="fstat-no" title="function not covered" >function(buf, callback) {</span>
-<span class="cstat-no" title="statement not covered" >    zlib.inflate(buf, callback);</span>
+  deflate: <span class="fstat-no" title="function not covered">function(buf, callback) {</span>
+<span class="cstat-no" title="statement not covered">    zlib.inflate(buf, callback);</span>
   }
 };
 &nbsp;
 &nbsp;
-<span class="fstat-no" title="function not covered" >function Service(defaults) {</span>
-<span class="cstat-no" title="statement not covered" >  if (defaults.baseURL) {</span>
-<span class="cstat-no" title="statement not covered" >   this.baseURL = defaults.baseURL;</span>
-<span class="cstat-no" title="statement not covered" >   delete defaults.baseURL;</span>
+<span class="fstat-no" title="function not covered">function Service(defaults) {</span>
+<span class="cstat-no" title="statement not covered">  if (defaults.baseURL) {</span>
+<span class="cstat-no" title="statement not covered">   this.baseURL = defaults.baseURL;</span>
+<span class="cstat-no" title="statement not covered">   delete defaults.baseURL;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  this.defaults = defaults;</span>
+<span class="cstat-no" title="statement not covered">  this.defaults = defaults;</span>
 }
 &nbsp;
 mixin(Service.prototype, {
-  request: <span class="fstat-no" title="function not covered" >function(path, options) {</span>
-<span class="cstat-no" title="statement not covered" >    return request(this._url(path), this._withDefaults(options));</span>
+  request: <span class="fstat-no" title="function not covered">function(path, options) {</span>
+<span class="cstat-no" title="statement not covered">    return request(this._url(path), this._withDefaults(options));</span>
   },
-  get: <span class="fstat-no" title="function not covered" >function(path, options) {</span>
-<span class="cstat-no" title="statement not covered" >    return get(this._url(path), this._withDefaults(options));</span>
+  get: <span class="fstat-no" title="function not covered">function(path, options) {</span>
+<span class="cstat-no" title="statement not covered">    return get(this._url(path), this._withDefaults(options));</span>
   },
-  patch: <span class="fstat-no" title="function not covered" >function(path, options) {</span>
-<span class="cstat-no" title="statement not covered" >    return patch(this._url(path), this._withDefaults(options));</span>
+  patch: <span class="fstat-no" title="function not covered">function(path, options) {</span>
+<span class="cstat-no" title="statement not covered">    return patch(this._url(path), this._withDefaults(options));</span>
   },
-  put: <span class="fstat-no" title="function not covered" >function(path, options) {</span>
-<span class="cstat-no" title="statement not covered" >    return put(this._url(path), this._withDefaults(options));</span>
+  put: <span class="fstat-no" title="function not covered">function(path, options) {</span>
+<span class="cstat-no" title="statement not covered">    return put(this._url(path), this._withDefaults(options));</span>
   },
-  post: <span class="fstat-no" title="function not covered" >function(path, options) {</span>
-<span class="cstat-no" title="statement not covered" >    return post(this._url(path), this._withDefaults(options));</span>
+  post: <span class="fstat-no" title="function not covered">function(path, options) {</span>
+<span class="cstat-no" title="statement not covered">    return post(this._url(path), this._withDefaults(options));</span>
   },
-  json: <span class="fstat-no" title="function not covered" >function(method, path, data, options) {</span>
-<span class="cstat-no" title="statement not covered" >    return json(this._url(path), data, this._withDefaults(options), method);</span>
+  json: <span class="fstat-no" title="function not covered">function(method, path, data, options) {</span>
+<span class="cstat-no" title="statement not covered">    return json(this._url(path), data, this._withDefaults(options), method);</span>
   },
-  del: <span class="fstat-no" title="function not covered" >function(path, options) {</span>
-<span class="cstat-no" title="statement not covered" >    return del(this._url(path), this._withDefaults(options));</span>
+  del: <span class="fstat-no" title="function not covered">function(path, options) {</span>
+<span class="cstat-no" title="statement not covered">    return del(this._url(path), this._withDefaults(options));</span>
   },
-  _url: <span class="fstat-no" title="function not covered" >function(path) {</span>
-<span class="cstat-no" title="statement not covered" >    if (this.baseURL) <span class="cstat-no" title="statement not covered" >return url.resolve(this.baseURL, path);</span></span>
-    else <span class="cstat-no" title="statement not covered" >return path;</span>
+  _url: <span class="fstat-no" title="function not covered">function(path) {</span>
+<span class="cstat-no" title="statement not covered">    if (this.baseURL) <span class="cstat-no" title="statement not covered">return url.resolve(this.baseURL, path);</span></span>
+    else <span class="cstat-no" title="statement not covered">return path;</span>
   },
-  _withDefaults: <span class="fstat-no" title="function not covered" >function(options) {</span>
-<span class="cstat-no" title="statement not covered" >    var o = mixin({}, this.defaults);</span>
-<span class="cstat-no" title="statement not covered" >    return mixin(o, options);</span>
+  _withDefaults: <span class="fstat-no" title="function not covered">function(options) {</span>
+<span class="cstat-no" title="statement not covered">    var o = mixin({}, this.defaults);</span>
+<span class="cstat-no" title="statement not covered">    return mixin(o, options);</span>
   }
 });
 &nbsp;
-<span class="fstat-no" title="function not covered" >function service(constructor, defaults, methods) {</span>
-<span class="cstat-no" title="statement not covered" >  constructor.prototype = new Service(defaults || {});</span>
-<span class="cstat-no" title="statement not covered" >  mixin(constructor.prototype, methods);</span>
-<span class="cstat-no" title="statement not covered" >  return constructor;</span>
+<span class="fstat-no" title="function not covered">function service(constructor, defaults, methods) {</span>
+<span class="cstat-no" title="statement not covered">  constructor.prototype = new Service(defaults || {});</span>
+<span class="cstat-no" title="statement not covered">  mixin(constructor.prototype, methods);</span>
+<span class="cstat-no" title="statement not covered">  return constructor;</span>
 }
 &nbsp;
 mixin(exports, {
@@ -1844,10 +1842,11 @@ mixin(exports, {
 &nbsp;
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 22:27:43 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 15:18:09 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
