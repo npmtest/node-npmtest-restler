@@ -1,4 +1,7 @@
-# test coverage for  [restler (v3.4.0)](https://github.com/danwrong/restler)  [![npm package](https://img.shields.io/npm/v/npmtest-restler.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-restler) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-restler.svg)](https://travis-ci.org/npmtest/node-npmtest-restler)
+# npmtest-restler
+
+#### basic test coverage for  [restler (v3.4.0)](https://github.com/danwrong/restler)  [![npm package](https://img.shields.io/npm/v/npmtest-restler.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-restler) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-restler.svg)](https://travis-ci.org/npmtest/node-npmtest-restler)
+
 #### An HTTP client library for node.js
 
 [![NPM](https://nodei.co/npm/restler.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/restler)
